@@ -35,6 +35,8 @@ def track_email(email_id):
         "remote_addr": request.remote_addr,
         "environ_keys": {k: str(v) for k, v in request.environ.items()}
     }
+
+    print(log_data,'logged_data')
     # Log to file
     with open("detailed_log.json", "a") as f:
         f.write(json.dumps(log_data, indent=2) + ",\n")
