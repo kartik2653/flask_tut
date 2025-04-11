@@ -33,8 +33,7 @@ def track_email(email_id):
         "cookies": request.cookies.to_dict(),
         "headers": dict(request.headers),
         "remote_addr": request.remote_addr,
-        "environ_keys": {k: str(v) for k, v in request.environ.items()},
-        "request": request
+        "environ_keys": {k: str(v) for k, v in request.environ.items()}
     }
     # Log to file
     with open("detailed_log.json", "a") as f:
